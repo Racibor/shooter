@@ -1,0 +1,28 @@
+group 'com.rab'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "io.ratpack:ratpack-gradle:1.9.0-rc-2"
+    }
+}
+
+apply plugin: "io.ratpack.ratpack-java"
+apply plugin: "idea"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    runtime "org.slf4j:slf4j-simple:1.7.30"
+}
+
+mainClassName = "my.app.Main"
